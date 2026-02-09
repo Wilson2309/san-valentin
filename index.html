@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Para mi San Valentín 💖</title>
+    <!-- Importación de Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+    <!-- CONEXIÓN AL CSS EXTERNO -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen">
+
+    <div id="hearts-container"></div>
+
+    <!-- Pantalla Inicial -->
+    <main id="main-content" class="relative z-10 text-center flex flex-col items-center lace-border p-6 md:p-10">
+        
+        <!-- Kitty SVG Animada -->
+        <div class="mb-4 md:mb-6 transform hover:scale-110 transition-transform cursor-pointer">
+            <svg width="120" height="100" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg" class="md:w-[140px] md:h-[110px]">
+                <ellipse cx="100" cy="80" rx="70" ry="55" fill="white" stroke="#333" stroke-width="3"/>
+                <path d="M50 45 L40 20 L75 35" fill="white" stroke="#333" stroke-width="3"/>
+                <path d="M150 45 L160 20 L125 35" fill="white" stroke="#333" stroke-width="3"/>
+                <circle cx="150" cy="45" r="14" fill="#ff4d6d" stroke="#333" stroke-width="2"/>
+                <circle cx="132" cy="40" r="10" fill="#ff4d6d" stroke="#333" stroke-width="2"/>
+                <circle cx="168" cy="40" r="10" fill="#ff4d6d" stroke="#333" stroke-width="2"/>
+                
+                <circle class="kitty-eye" cx="75" cy="85" r="5" fill="#333" style="transform-origin: 75px 85px;"/>
+                <circle class="kitty-eye" cx="125" cy="85" r="5" fill="#333" style="transform-origin: 125px 85px;"/>
+                
+                <ellipse cx="100" cy="95" rx="7" ry="5" fill="#ffd700" stroke="#333" stroke-width="1"/>
+                <line x1="35" y1="80" x2="15" y2="75" stroke="#333" stroke-width="2"/>
+                <line x1="165" y1="80" x2="185" y2="75" stroke="#333" stroke-width="2"/>
+            </svg>
+        </div>
+
+        <h1 class="text-3xl md:text-5xl font-pacifico text-pink-600 mb-8 md:mb-12 px-2 drop-shadow-md text-pulse">
+            ¿Quieres ser mi San Valentín?
+        </h1>
+
+        <div class="flex flex-col items-center justify-center gap-8 md:gap-12 w-full mt-4">
+            <button id="btn-si" class="bg-green-500 hover:bg-green-600 text-white font-extrabold py-4 px-12 md:py-5 md:px-16 rounded-full text-3xl md:text-4xl shadow-2xl transform active:scale-90 transition-all">
+                SÍ ❤️
+            </button>
+
+            <button id="btn-no" class="bg-red-500 text-white font-bold py-2 px-6 md:py-3 md:px-8 rounded-full text-lg md:text-xl shadow-lg border-2 border-red-700">
+                No
+            </button>
+        </div>
+    </main>
+
+    <!-- Pantalla Final -->
+    <section id="modal" class="modal-love">
+        <div class="message-box">
+            <div class="flex justify-center mb-4 md:mb-6">
+                <span class="text-5xl md:text-7xl animate-bounce">🎀🐱🎀</span>
+            </div>
+            <h2 class="text-2xl md:text-4xl font-pacifico text-pink-600 mb-4 md:mb-6">¡Para mi San Valentín!</h2>
+            <p id="final-message" class="text-base md:text-xl text-gray-700 leading-relaxed mb-6 md:mb-8 font-semibold">
+                Gracias por estar conmigo en esta fecha tan bonita, y por hacer mis días más bonitos y llenos de amor. 
+                <br><br>
+                Cada momento a tu lado es un regalo maravilloso; eres el 'Sí' más bonito de toda mi vida.
+            </p>
+            <div class="text-pink-500 text-2xl md:text-4xl mt-2 font-pacifico drop-shadow-sm">Te amo muchooo <span class="heart-pulse">💗</span></div>
+            <p class="mt-4 md:mt-6 text-pink-300 text-xs md:text-sm italic">Para siempre juntos...</p>
+        </div>
+    </section>
+
+    <!-- CONEXIÓN AL JAVASCRIPT EXTERNO -->
+    <script src="script.js"></script>
+</body>
+</html>
